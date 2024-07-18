@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --color-primario: #F3F5FC;
+    --color-secundario: #0A3871;
+    --fuente-primaria: font-family: "Inter", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+body{
+    min-height: 100vh;
+    padding-bottom: 40px;
+    background-color: var(--color-primario);
+}
+
+.header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 96px;
+    padding-left: 1rem;
+}
+
+.interaccion{
+    width: 100%;
+    height: auto;
+    padding: 0 1rem 1.5rem 1rem;
+    margin-top: 56px;
+}
+
+.ingreso-texto{
+    width: 100%;
+    height: 200px;
+    border: none;
+    background-color: var(--color-primario);
+    font-family: var(--fuente-primaria);
+    font-size: 2rem;
+    color: var(--color-secundario);
+}
+
+textarea::placeholder{
+    color: var(--color-secundario);
+}
+
+.interaccion__condiciones{
+    display: flex;
+    margin-bottom: 1rem;
+    font-family: var(--fuente-primaria);
+    font-size: 0.75rem;
+    color: #495057;
+}
+
+.interaccion__condiciones__icono{
+    width: 1rem;
+    height: 1rem;
+    margin-right: 8px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #67808E;
+    color: #fff;
+}
+
+.interaccion__botones{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-size: 1rem;
+}
+
+.interaccion__botones button{
+    width: 100%;
+    padding: 24px 0;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.interaccion__botones__encriptar{
+    background-color: var(--color-secundario);
+    color: #fff;
+}
+
+.interaccion__botones__desencriptar{
+    border: 1px solid var(--color-secundario);
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+.resultado{
+    display: flex;
+    padding: 0 16px;
+
+}
+
+.resultado__sinTexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 24px 8px;
+    padding: 32px;
+    gap: 32px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 32px;
+}
+
+.resultado__sinTexto__ningunMensaje{
+    font-family: var(--fuente-primaria);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343A40;
+    text-align: center;
+}
+
+.resultado__sinTexto__ingresaElTexto{
+    font-family: var(--fuente-primaria);
+    font-size: 1rem;
+    color: #495057;
+    text-align: center;
+}
+

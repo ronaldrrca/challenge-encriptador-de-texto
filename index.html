@@ -7,8 +7,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header></header>
-    <main></main>
+    <header class="header">
+        <img src="vector.svg" alt="logo">
+    </header>
+    <main class="main">
+        <section class="interaccion">
+            <textarea name="" id="" class="ingreso-texto" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="interaccion__condiciones">
+                <span class="interaccion__condiciones__icono">!</span>
+                <span class="interaccion__condiciones__texto">Solo letras minúsculas y sin acentos</span>
+            </div>
+            <div class="interaccion__botones">
+                <button class="interaccion__botones__encriptar">Encriptar</button>
+                <button class="interaccion__botones__desencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <section class="resultado">
+            <div class="resultado__sinTexto">
+                <span class="resultado__sinTexto__ningunMensaje">Ningún mensaje fue encontrado</span>
+                <span class="resultado__sinTexto__ingresaElTexto">Ingresa el texto que desees encriptar o desencriptar.</span>
+            </div>
+        </section>
+    </main>
     <footer></footer>
     <script src="app.js"></script>
 </body>
