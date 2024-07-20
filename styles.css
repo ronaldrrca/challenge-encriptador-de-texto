@@ -81,7 +81,7 @@ textarea::placeholder{
     font-size: 1rem;
 }
 
-.interaccion__botones button{
+.interaccion__botones button, .resultado__texto__botonCopiar{
     width: 100%;
     padding: 24px 0;
     border-radius: 24px;
@@ -93,7 +93,7 @@ textarea::placeholder{
     color: #fff;
 }
 
-.interaccion__botones__desencriptar{
+.interaccion__botones__desencriptar, .resultado__texto__botonCopiar{
     border: 1px solid var(--color-secundario);
     background-color: var(--color-primario);
     color: var(--color-secundario);
@@ -112,6 +112,14 @@ textarea::placeholder{
 
 .resultado__texto{
     display: none;
+    align-items: flex-start;
+    padding-top: 32px;
+}
+
+.resultado__texto__parrafo{
+    font-family: var(--fuente-primaria);
+    font-size: 1.5rem;
+    color: #495057;
 }
 
 .resultado__sinTexto, .resultado__texto{
@@ -120,7 +128,6 @@ textarea::placeholder{
     width: 100%;
     margin: 64px 8px 24px 8px;
     padding: 32px;
-    
     background-color: #fff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 32px;
@@ -197,7 +204,7 @@ textarea::placeholder{
     }
 
     .ingreso-texto{
-        height: 350px;
+        height: 335px;
     }
 
     .resultado{
@@ -205,6 +212,17 @@ textarea::placeholder{
         height: 570px;
         padding: 0;
         margin-top: 46px;
+        /* background-color: pink; */
+    }
+
+    .resultado__texto{
+        /* overflow: scroll; */
+        justify-content: space-between;
+    }
+
+    .resultado__texto__parrafo{
+        height: 82%;
+        overflow: scroll;
     }
 
     .main{
