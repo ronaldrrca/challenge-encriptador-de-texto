@@ -177,17 +177,23 @@ textarea::placeholder{
 @media(min-width: 1200px){
     body{
         max-height: 100vh;
+        position: relative;
     }
 
     .header{
+        position: absolute;
+        top: 0;
+        left: 0;
         height: auto;
         padding-top: 40px;
         padding-left: 80px;
+        /* background-color: pink; */
     }
 
     .interaccion{
         width: 70%;
         padding-right: 0;
+        margin-top: 152px;
     }
 
     .ingreso-texto{
@@ -196,8 +202,9 @@ textarea::placeholder{
 
     .resultado{
         width: 30%;
-        height: 530px;
+        height: 570px;
         padding: 0;
+        margin-top: 46px;
     }
 
     .main{
