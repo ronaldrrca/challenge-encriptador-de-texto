@@ -15,22 +15,35 @@
 
 body{
     height: auto;
-    padding-bottom: 40px;
     background-color: var(--color-primario);
 }
 
 .header{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     width: 100%;
     height: 96px;
+    display: flex;
     padding-left: 1rem;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .main{
     display: flex;
     flex-direction: column;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: var(--color-secundario);
+    font-size: 1rem;
+    font-family: var(--fuente-primaria);
+    color: var(--color-primario);
+    line-height: 1.5rem;
 }
 
 .interaccion{
@@ -44,6 +57,9 @@ body{
     width: 100%;
     height: 251px;
     border: none;
+    outline: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px 10px;
     background-color: var(--color-primario);
     font-family: var(--fuente-primaria);
     font-size: 2rem;
@@ -103,6 +119,7 @@ textarea::placeholder{
     display: flex;
     justify-content: center;
     padding: 0 16px;
+    border-radius: 32px;
 }
 
 .resultado__sinTexto{
@@ -112,13 +129,20 @@ textarea::placeholder{
 
 .resultado__texto{
     display: none;
-    align-items: flex-start;
     padding-top: 32px;
+    gap: 20px;
 }
 
 .resultado__texto__parrafo{
+    width: 100%;
+    min-height: 300px;
+    vertical-align: top;
+    resize: none;
+    border: none;
+    outline: none;
     font-family: var(--fuente-primaria);
     font-size: 1.5rem;
+    line-height: 1.5rem;
     color: #495057;
 }
 
@@ -129,8 +153,8 @@ textarea::placeholder{
     margin: 64px 8px 24px 8px;
     padding: 32px;
     background-color: #fff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 32px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .resultado__sinTexto__ningunMensaje{
@@ -149,11 +173,11 @@ textarea::placeholder{
 }
 
 .resultado__imagen{
-    display: none;
+    width: 50%;
+    margin: 0 auto;
 }
 
 @media (min-width: 768px){
-
     .header{
         padding-left: 40px;
     }
@@ -176,7 +200,7 @@ textarea::placeholder{
     }
 
     .resultado__imagen{
-        display: none;
+        width: 30%;
     }
     
 }
@@ -194,7 +218,6 @@ textarea::placeholder{
         height: auto;
         padding-top: 40px;
         padding-left: 80px;
-        /* background-color: pink; */
     }
 
     .interaccion{
@@ -212,17 +235,13 @@ textarea::placeholder{
         height: 570px;
         padding: 0;
         margin-top: 46px;
-        /* background-color: pink; */
     }
-
-    .resultado__texto{
-        /* overflow: scroll; */
-        justify-content: space-between;
-    }
-
+    
     .resultado__texto__parrafo{
+        width: 100%;
         height: 82%;
-        overflow: scroll;
+        overflow-x: hidden;
+        overflow-y: scroll;
     }
 
     .main{

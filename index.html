@@ -5,44 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="vector.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/vector.svg" type="image/x-icon">
 </head>
 <body>
     <header class="header">
-        <img src="vector.svg" alt="logo">
+        <img src="./assets/vector.svg" alt="logo">
     </header>
     <main class="main">
         <section class="interaccion">
-            <textarea name="" id="" class="ingreso-texto" placeholder="Ingrese el texto aquí"></textarea>
+            <textarea name="" id="interaccion__inputArea" class="ingreso-texto" placeholder="Ingrese el texto aquí"></textarea>
             <div class="interaccion__condiciones">
                 <span class="interaccion__condiciones__icono">!</span>
                 <span class="interaccion__condiciones__texto">Solo letras minúsculas y sin acentos</span>
             </div>
             <div class="interaccion__botones">
-                <button class="interaccion__botones__encriptar">Encriptar</button>
-                <button class="interaccion__botones__desencriptar">Desencriptar</button>
+                <button onclick="encriptar();" class="interaccion__botones__encriptar">Encriptar</button>
+                <button onclick="desencriptar();" class="interaccion__botones__desencriptar">Desencriptar</button>
             </div>
         </section>
         <section class="resultado">
-            <div class="resultado__sinTexto">
-                <img class="resultado__imagen" src="muneco.svg" alt="caricatura de perona arrodillada buscando con una lupa">
+            <div id="resultado__sinTexto" class="resultado__sinTexto">
+                <img class="resultado__imagen" src="./assets/escudo_candado.svg" alt="Icono digital de escudo con candado y escudo con etiquea de marca">
                 <span class="resultado__sinTexto__ningunMensaje">Ningún mensaje fue encontrado</span>
                 <span class="resultado__sinTexto__ingresaElTexto">Ingresa el texto que desees encriptar o desencriptar.</span>
             </div>
-            <div class="resultado__texto">
-                <p class="resultado__texto__parrafo">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laborum, saepe aperiam asperiores qui voluptates 
-                    veritatis, magnam, dolor tempora officiis est rerum totam voluptas libero. Soluta quis iure sunt architecto.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laborum, saepe aperiam asperiores qui voluptates 
-                    veritatis, magnam, dolor tempora officiis est rerum totam voluptas libero. Soluta quis iure sunt architecto.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laborum, saepe aperiam asperiores qui voluptates 
-                    veritatis, magnam, dolor tempora officiis est rerum totam voluptas libero. Soluta quis iure sunt architecto.
-                </p>
-                <button class="resultado__texto__botonCopiar">Copiar</button>
+            <div id="resultado__texto" class="resultado__texto">
+                <textarea id="resultado__texto__parrafo" readonly class="resultado__texto__parrafo" name="" id=""></textarea>
+                <button onclick="copiarTexto();" class="resultado__texto__botonCopiar">Copiar</button>
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer class="footer">
+        <span>Desarrollado por Ronald R. Rodríguez Campillo</span>
+        <span>Challenge Alura / ONE (Oracle Next Education)</span>
+        <span>Curso principiante en programación</span>
+    </footer>
     <script src="app.js"></script>
 </body>
 </html>
